@@ -1,0 +1,637 @@
+  .content-section {
+      display: none;
+  }
+  .content-section.active {
+      display: block;
+  }
+
+  h1{
+    text-align: center;
+    background-color: rgb(55, 55, 211);
+    padding: 15px;
+    color: white;
+    border-radius: 20px;
+  }
+
+  h1 {
+      background-color: rgb(31, 31, 211);
+      text-align: center;
+      padding: 15px;
+      color: white;
+      border-radius: 10px 8px;
+  }
+
+  #hospital-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 30px;
+  }
+  .hospital-content-1 ,.hospital-content-2{
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      margin-top: 20px;
+  }
+  .content-1   {
+      padding: 4rem;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       animation: fadeInUp 0.6s ease-out;
+       transition: ease-in-out .8s;
+  }
+  .content-1:hover{
+    transform: translateY(-15px);
+  }
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.content-1 p{
+    font-weight: bolder;
+}
+  .content-1 h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #333;
+      border-left: 5px solid #4caf50;
+      padding-left: 10px;
+  }
+
+  .content-1 table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      overflow: hidden;
+  }
+
+  .content-1 thead {
+      background-color: #4caf50;
+      color: white;
+  }
+
+  .content-1 thead td {
+      padding: 12px;
+      font-weight: bold;
+      text-align: left;
+  }
+
+  .content-1 tbody td {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+  }
+
+  .content-1 tbody tr:hover {
+      background-color: #f1f1f1;
+      transition: background-color 0.3s ease;
+  }
+
+  @media (max-width: 600px) {
+
+      .content-1 table,
+      .content-1 thead,
+      .content-1 tbody,
+      .content-1 td,
+      .content-1 tr {
+          display: block;
+          width: 100%;
+      }
+
+      .content-1 thead {
+          display: none;
+      }
+
+      .content-1 td {
+          padding: 10px;
+          text-align: right;
+          position: relative;
+      }
+
+      .content-1 td::before {
+          content: attr(data-label);
+          position: absolute;
+          left: 10px;
+          top: 10px;
+          font-weight: bold;
+          text-align: left;
+      }
+  }
+
+
+  /* css for today appointments */
+#appointments-section {
+  padding: 20px;
+  animation: fadeInSection 0.6s ease-in-out;
+}
+
+@keyframes fadeInSection {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  animation: fadeInTable 0.8s ease-in-out;
+}
+
+@keyframes fadeInTable {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #4285f4;
+  color: white;
+}
+
+tr.appointment-row:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  .appointment-cell {
+    position: relative;
+    padding-left: 50%;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .appointment-cell::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    width: 45%;
+    padding-right: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+}
+
+/* Button Styling */
+.status-form button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  margin: 2px;
+}
+
+.approve-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.reject-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.status-form button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Status color coding */
+.status.pending {
+  color: orange;
+  font-weight: bold;
+}
+
+.status.approved {
+  color: green;
+  font-weight: bold;
+}
+
+.status.rejected {
+  color: red;
+  font-weight: bold;
+}
+
+/* css for vaccine stock  */
+#vaccine-stock {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #f9fcff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 0.7s ease;
+  transition: all 0.4s ease;
+}
+
+#vaccine-stock h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  position: relative;
+}
+
+#vaccine-stock h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #00bcd4;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+#vaccine-stock table {
+  width: 100%;
+  border-collapse: collapse;
+  animation: fadeInUp 0.6s ease;
+}
+
+#vaccine-stock th,
+#vaccine-stock td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+#vaccine-stock th {
+  background-color: #00bcd4;
+  color: white;
+  font-weight: 600;
+}
+
+#vaccine-stock tr:hover td {
+  background-color: #f1f9fc;
+}
+
+#vaccine-stock input[type="number"] {
+  width: 80px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+#vaccine-stock input[type="number"]:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 6px rgba(0, 188, 212, 0.3);
+  outline: none;
+}
+
+#vaccine-stock button {
+  padding: 6px 14px;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#vaccine-stock button:hover {
+  background-color: #0097a7;
+  transform: translateY(-2px);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  #vaccine-stock {
+    padding: 15px;
+  }
+
+  #vaccine-stock h2 {
+    font-size: 22px;
+  }
+
+  #vaccine-stock table,
+  #vaccine-stock thead,
+  #vaccine-stock tbody,
+  #vaccine-stock th,
+  #vaccine-stock td,
+  #vaccine-stock tr {
+    display: block;
+    width: 100%;
+  }
+
+  #vaccine-stock thead {
+    display: none;
+  }
+
+  #vaccine-stock tr {
+    margin-bottom: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+
+  #vaccine-stock td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+  }
+
+  #vaccine-stock td:last-child {
+    border-bottom: none;
+  }
+
+  #vaccine-stock td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    flex-basis: 50%;
+    color: #333;
+  }
+
+  #vaccine-stock input[type="number"] {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  #vaccine-stock button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+/* css for add vaccine */
+/* Add this to your style.css file */
+
+#add-vaccine {
+  max-width: 500px;
+  margin: 40px auto;
+  background: #f9f9f9;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#add-vaccine:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+#add-vaccine h3 {
+  text-align: center;
+  color: #2d59a5;
+  margin-bottom: 20px;
+  font-size: 24px;
+  animation: slideInDown 0.7s ease-out;
+}
+
+#add-vaccine form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#add-vaccine input {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+#add-vaccine input:focus {
+  border-color: #2d59a5;
+  outline: none;
+  box-shadow: 0 0 5px rgba(45, 89, 165, 0.3);
+}
+
+#add-vaccine button {
+  padding: 12px;
+  border: none;
+  background-color: #2d59a5;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#add-vaccine button:hover {
+  background-color: #1f3e73;
+  transform: scale(1.03);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInDown {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #add-vaccine {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  #add-vaccine h3 {
+    font-size: 20px;
+  }
+
+  #add-vaccine input,
+  #add-vaccine button {
+    font-size: 15px;
+  }
+}
+
+
+/* css for profile */
+#hospital-profile {
+  padding: 2vw;
+  max-width: 90%;
+  margin: auto;
+  animation: fadeIn 0.6s ease;
+  text-align: start;
+  border-radius: 30px;
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+
+.image-upload-container {
+  position: relative;
+  text-align: center;
+  width: 35vw;
+  max-width: 150px;
+  height: 35vw;
+  max-height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  animation: fadeIn 1s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px auto;
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.image-upload-container:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-upload-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: opacity 0.3s ease;
+}
+
+.image-upload-container:hover img {
+  opacity: 0.85;
+}
+
+.image-upload-container input[type="file"] {
+  display: none;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@media (max-width: 480px) {
+  #hospital-profile {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .image-upload-container {
+    width: 100px;
+    height: 100px;
+  }
+}
+/* css for updating */
+.update-form-container {
+  background: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.5s ease-out;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.update-form-container h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.update-form-container input,
+.update-form-container button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.update-form-container input:focus {
+  border-color: #4caf50;
+}
+
+.update-form-container button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.update-form-container button:hover {
+ background-color: #45a049;
+}
+
+.toggle-btn {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+  animation: fadeInBtn 0.5s ease;
+  margin-bottom: 20px;
+}
+
+.toggle-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 123, 255, 0.4);
+}
+
+@keyframes fadeInBtn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

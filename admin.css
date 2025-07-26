@@ -1,0 +1,1262 @@
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* Header */
+h1 {
+    background-color: rgb(31, 31, 211);
+    text-align: center;
+    padding: 15px;
+    color: white;
+    border-radius: 10px 8px;
+    font-size: 2rem;
+    word-wrap: break-word;
+}
+
+/* Dashboard Section */
+#dashboard-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+}
+
+/* Admin content layout */
+.admin-content-1,
+.admin-content-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+/* Box Styles */
+.content-1 {
+    flex: 1 1 300px;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeInUp 0.6s ease-out;
+    transition: ease-in-out .7s;
+}
+.content-1:hover{
+    transform: translateY(-15px);
+}
+/* Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Text Styling */
+.content-1 p {
+    font-weight: bolder;
+}
+
+.content-1 h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+    border-left: 5px solid #4caf50;
+    padding-left: 10px;
+}
+
+/* Table Styling */
+.content-1 table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.content-1 thead {
+    background-color: #4caf50;
+    color: white;
+}
+
+.content-1 thead td {
+    padding: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.content-1 tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.content-1 tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .admin-content-1,
+    .admin-content-2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-1 {
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .content-1 table,
+    .content-1 thead,
+    .content-1 tbody,
+    .content-1 td,
+    .content-1 tr {
+        display: block;
+        width: 100%;
+    }
+
+    .content-1 thead {
+        display: none;
+    }
+
+    .content-1 td {
+        padding: 10px;
+        text-align: right;
+        position: relative;
+        border-bottom: 1px solid #eee;
+    }
+
+    .content-1 td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        font-weight: bold;
+        text-align: left;
+        color: #333;
+    }
+}
+
+/* All child detail section CSS */
+.all-child-detail {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeInUp 0.6s ease-out;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.details-table thead {
+    background-color: #4caf50;
+    color: white;
+}
+
+.details-table thead th {
+    padding: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.details-table tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.details-table tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+.approved {
+    color: #155724;
+    font-weight: bold;
+}
+
+.pending {
+    color: #856404;
+    font-weight: bold;
+}
+
+.rejected {
+    color: #721c24;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+    .details-table,
+    .details-table thead,
+    .details-table tbody,
+    .details-table th,
+    .details-table td,
+    .details-table tr {
+        display: block;
+        width: 100%;
+    }
+
+    .details-table thead {
+        display: none;
+    }
+
+    .details-table td {
+        padding: 10px;
+        text-align: right;
+        position: relative;
+    }
+
+    .details-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+/* Upcomming Vaccines Section css */
+
+
+.upcoming-vaccines-details {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeInUp 0.6s ease-out;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.upcoming-vaccines-details table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.upcoming-vaccines-details thead {
+    background-color: #4caf50;
+    color: white;
+}
+
+.upcoming-vaccines-details thead th {
+    padding: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.upcoming-vaccines-details tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.upcoming-vaccines-details tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+.status-approved {
+    color: #155724;
+    font-weight: bold;
+}
+
+.status-pending {
+    color: #856404;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+    .upcoming-vaccines-details table,
+    .upcoming-vaccines-details thead,
+    .upcoming-vaccines-details tbody,
+    .upcoming-vaccines-details th,
+    .upcoming-vaccines-details td,
+    .upcoming-vaccines-details tr {
+        display: block;
+        width: 100%;
+    }
+
+    .upcoming-vaccines-details thead {
+        display: none;
+    }
+
+    .upcoming-vaccines-details td {
+        padding: 10px;
+        text-align: right;
+        position: relative;
+    }
+
+    .upcoming-vaccines-details td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+
+
+
+
+/* Vaccination Report Section Styling */
+#vaccination-report {
+    padding: 30px 20px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+#vaccination-report h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: white;
+}
+
+
+#vaccination-report .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+#vaccination-report .filters input,
+#vaccination-report .filters select,
+#vaccination-report .filters button {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    min-width: 180px;
+    font-size: 15px;
+}
+
+#vaccination-report .filters button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+#vaccination-report .filters button:hover {
+    background-color: #0056b3;
+}
+
+
+#vaccination-report table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+#vaccination-report thead {
+    background-color: #007bff;
+    color: white;
+}
+
+#vaccination-report th,
+#vaccination-report td {
+    text-align: left;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+}
+
+#vaccination-report tbody tr:nth-child(even) {
+    background-color: #f4f8fb;
+}
+
+#vaccination-report tbody tr:hover {
+    background-color: #eef4ff;
+}
+
+
+#vaccination-report button[onclick*="exportToPDF"],
+#vaccination-report button[onclick*="window.print"] {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#vaccination-report button[onclick*="window.print"] {
+    background-color: #17a2b8;
+}
+
+#vaccination-report button:hover {
+    opacity: 0.9;
+}
+
+
+@media (max-width: 768px) {
+    #vaccination-report .filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #vaccination-report table,
+    #vaccination-report thead,
+    #vaccination-report tbody,
+    #vaccination-report th,
+    #vaccination-report td,
+    #vaccination-report tr {
+        display: block;
+    }
+
+    #vaccination-report thead {
+        display: none;
+    }
+
+    #vaccination-report tbody tr {
+        margin-bottom: 15px;
+        background: white;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    }
+
+    #vaccination-report td {
+        padding: 8px 10px;
+        text-align: right;
+        position: relative;
+        border: none;
+    }
+
+    #vaccination-report td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 50%;
+        font-weight: bold;
+        text-align: left;
+        color: #333;
+    }
+
+    #vaccination-report button[onclick*="exportToPDF"],
+    #vaccination-report button[onclick*="window.print"] {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+
+
+/* css for printing */
+@media print {
+
+
+    body * {
+        visibility: hidden;
+    }
+
+
+    #vaccination-report,
+    #vaccination-report * {
+        visibility: visible;
+    }
+
+
+    #vaccination-report {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+
+
+
+
+.vaccine-list-section-child {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeInUp 0.6s ease-out;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.vaccine-list-table-child {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.vaccine-list-table-child thead {
+    background-color: #4caf50;
+    color: white;
+}
+
+.vaccine-list-table-child thead th {
+    padding: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.vaccine-list-table-child tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.vaccine-list-table-child tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+
+    .vaccine-list-table-child,
+    .vaccine-list-table-child thead,
+    .vaccine-list-table-child tbody,
+    .vaccine-list-table-child th,
+    .vaccine-list-table-child td,
+    .vaccine-list-table-child tr {
+        display: block;
+        width: 100%;
+    }
+
+    .vaccine-list-table-child thead {
+        display: none;
+    }
+
+    .vaccine-list-table-child td {
+        padding: 10px;
+        text-align: right;
+        position: relative;
+    }
+
+    .vaccine-list-table-child td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+/* css for hospital list */
+.hospital-list-content {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeInUp 0.6s ease-out;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.hospital-list-details {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.hospital-list-details thead {
+    background-color: #4caf50;
+    color: white;
+}
+
+.hospital-list-details th,
+.hospital-list-details td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.hospital-list-details tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+
+    .hospital-list-details,
+    .hospital-list-details thead,
+    .hospital-list-details tbody,
+    .hospital-list-details th,
+    .hospital-list-details td,
+    .hospital-list-details tr {
+        display: block;
+        width: 100%;
+    }
+
+    .hospital-list-details thead {
+        display: none;
+    }
+
+    .hospital-list-details td {
+        padding: 10px;
+        text-align: right;
+        position: relative;
+    }
+
+    .hospital-list-details td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+
+
+/* css for parent list */
+
+#parent-list {
+    animation: slideFadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    padding: 20px;
+}
+
+
+#parent-list table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInTable 1s ease-in;
+    transition: all 0.3s ease-in-out;
+}
+
+#parent-list th,
+#parent-list td {
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#parent-list th {
+    background-color: #4caf50;
+    color: white;
+}
+
+#parent-list tr:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.01);
+}
+
+
+@keyframes slideFadeIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInTable {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    #parent-list table,
+    #parent-list thead,
+    #parent-list tbody,
+    #parent-list th,
+    #parent-list td,
+    #parent-list tr {
+        display: block;
+        width: 100%;
+    }
+
+    #parent-list tr {
+        margin-bottom: 15px;
+        background-color: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    #parent-list td {
+        padding-left: 50%;
+        position: relative;
+        text-align: left;
+        border: none;
+        font-size: 0.95rem;
+    }
+
+    #parent-list td::before {
+        position: absolute;
+        top: 12px;
+        left: 16px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        content: attr(data-label);
+        color: #3498db;
+    }
+
+    #parent-list th {
+        display: none;
+    }
+}
+
+/* CSS FOR PENDING REQUEST  */
+.pending-request-section-child {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeInUp 0.6s ease-out;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.pending-request-table-child {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pending-request-table-child thead {
+    background-color: #4caf50;
+    color: white;
+}
+
+.pending-request-table-child thead th {
+    padding: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.pending-request-table-child tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.pending-request-table-child tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+
+.action-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn.view {
+    background-color: #007bff;
+}
+
+.action-btn.view:hover {
+    background-color: #0056b3;
+}
+
+.action-btn.approve {
+    background-color: #28a745;
+}
+
+.action-btn.approve:hover {
+    background-color: #1e7e34;
+}
+
+.action-btn.reject {
+    background-color: #dc3545;
+}
+
+.action-btn.reject:hover {
+    background-color: #c82333;
+}
+
+
+@media (max-width: 768px) {
+
+    .pending-request-table-child,
+    .pending-request-table-child thead,
+    .pending-request-table-child tbody,
+    .pending-request-table-child th,
+    .pending-request-table-child td,
+    .pending-request-table-child tr {
+        display: block;
+        width: 100%;
+    }
+
+    .pending-request-table-child thead {
+        display: none;
+    }
+
+    .pending-request-table-child td {
+        padding: 10px;
+        text-align: right;
+        position: relative;
+    }
+
+    .pending-request-table-child td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+
+/* CSS FOR ADD VACCINE */
+
+.add-vaccine-form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: #4caf50;
+}
+
+.submit-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #388e3c;
+}
+
+/* CSS FOR ADD HOSPITAL SECTION */
+
+/* Main Container Animation */
+#add-hospital {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeInUp 0.8s ease-out;
+    transition: box-shadow 0.3s ease;
+}
+
+#add-hospital:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
+#add-hospital h1 {
+    background-color: #1f1fd3;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Label Styling */
+.add-hospital-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Input & Textarea Styling */
+.add-hospital-form input,
+.add-hospital-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.add-hospital-form input:focus,
+.add-hospital-form textarea:focus {
+    border-color: #4caf50;
+    background-color: #ffffff;
+    outline: none;
+}
+
+/* Submit Button */
+.add-hospital-form .submit-btn {
+    margin-top: 25px;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.add-hospital-form .submit-btn:hover {
+    background-color: #43a047;
+    transform: scale(1.05);
+}
+
+.add-hospital-form .submit-btn:active {
+    transform: scale(0.97);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* CSS for all action amd edit button */
+
+.action-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.action-btn.edit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.action-btn.delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.action-btn.view {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn.view:hover {
+    background-color: #1976D2;
+}
+
+/* buttons css and chat bot */
+#open-chat-btn {
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+#chat-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+}
+
+#close-btn {
+    background-color: transparent;
+    color: #555;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.chat-box {
+    height: 250px;
+    overflow-y: auto;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.message {
+    margin-bottom: 8px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    max-width: 90%;
+    word-wrap: break-word;
+}
+
+.message strong {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.message.bot {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+}
+
+.message.you {
+    background-color: #d1e7dd;
+    align-self: flex-end;
+    text-align: right;
+}
+
+#user-input {
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 6px;
+    width: calc(100% - 32px);
+}
+
+#send-btn {
+    background-color: #198754;
+    color: white;
+    border: none;
+    padding: 8px;
+    margin: 0 8px 8px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#send-btn:hover {
+    background-color: #157347;
+}
+
+/* css for profilr */
+#my-profile {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.profile-content {
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Image Styling */
+#my-profile {
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+  animation: fadeIn 0.6s ease;
+}
+
+.profile-content {
+  text-align: center;
+}
+
+.profile-image-wrapper {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  margin-bottom: 15px;
+  position: relative;
+  animation: fadeIn 0.6s ease;
+}
+
+.profile-image-wrapper:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.profile-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hide input */
+#image-upload {
+  display: none;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .profile-image-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+  #my-profile {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-image-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  #my-profile {
+    padding: 15px;
+  }
+}

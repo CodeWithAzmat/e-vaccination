@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Vaccination System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h2>E-Vaccination System</h2>
+                <p>Login to your account</p>
+            </div>
+            <div class="login-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginRole">Select Role</label>
+                        <select class="form-control" id="loginRole" name="role">
+                            <option value="admin">Admin</option>
+                            <option value="parent">Parent</option>
+                            <option value="hospital">Hospital</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" class="form-control" id="loginEmail" name="email"
+                            placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" name="password"
+                            placeholder="Enter your password">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" id="loginBtn">Login</button>
+                </form>
+
+                <div class="login-footer">
+                    <p>Don't have an account? <a href="#" id="registerLink">Register here</a></p>
+                </div>
+            </div>
+        </div>
+
+       <div class="modal" id="registerModal">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Register New Account</h3>
+            <button class="close" id="closeRegisterModal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="registerRole">Account Type</label>
+                <select class="form-control" id="registerRole">
+                    <option value="parent">Parent</option>
+                    <option value="hospital">Hospital</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="registerName">Full Name</label>
+                <input type="text" class="form-control" id="registerName" placeholder="Enter your full name"
+                    name="signup-name">
+            </div>
+            <div class="form-group">
+                <label for="registerEmail">Email</label>
+                <input type="email" class="form-control" id="registerEmail" placeholder="Enter your email"
+                    name="signup-email">
+            </div>
+            <div class="form-group">
+                <label for="registerPassword">Password</label>
+                <input type="password" class="form-control" id="registerPassword"
+                    placeholder="Create a password" name="signup-password">
+            </div>
+            <div class="form-group">
+                <label for="registerConfirmPassword">Confirm Password</label>
+                <input type="password" class="form-control" id="registerConfirmPassword"
+                    placeholder="Confirm your password" name="signup-confirm-password">
+            </div>
+
+            <!-- Parent-specific fields -->
+            <div id="parentFields" style="display: none;">
+                <div class="form-group">
+                    <label for="registerPhone">Phone Number</label>
+                    <input type="tel" class="form-control" id="registerPhone" placeholder="Enter your phone number" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="registerAddress">Address</label>
+                    <textarea class="form-control" id="registerAddress" rows="3" placeholder="Enter your address" name="address"></textarea>
+                </div>
+            </div>
+
+            <!-- Hospital-specific fields -->
+            <div id="hospitalFields" style="display: none;">
+                <div class="form-group">
+                    <label for="registerHospitalName">Hospital Name</label>
+                    <input type="text" class="form-control" id="registerHospitalName"
+                        placeholder="Enter hospital name" name="hospital_name">
+                </div>
+                <div class="form-group">
+                    <label for="registerHospitalLocation">Location</label>
+                    <input type="text" class="form-control" id="registerHospitalLocation"
+                        placeholder="Enter hospital location" name="location">
+                </div>
+                <div class="form-group">
+                    <label for="registerHospitalContact">Contact Number</label>
+                    <input type="tel" class="form-control" id="registerHospitalContact"
+                        placeholder="Enter contact number" name="contact_number">
+                </div>
+                <div class="form-group">
+                    <label for="registerHospitalEmail">Email</label>
+                    <input type="email" class="form-control" id="registerHospitalEmail"
+                        placeholder="Enter hospital email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="registerHospitalAddress">Hospital Address</label>
+                    <textarea class="form-control" id="registerHospitalAddress" rows="3"
+                        placeholder="Enter hospital address" name="address"></textarea>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="cancelRegister">Cancel</button>
+                <button class="btn btn-primary" id="submitRegister" type="submit" name="submit">Register</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            <script src="main.js"></script>
+
+
+
+</body>
+
+</html>
